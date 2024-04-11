@@ -1,0 +1,24 @@
+﻿@model Teacher
+
+<h1>Edit Teacher</h1>
+
+@using (Html.BeginForm("Save", "Teacher", FormMethod.Post))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(m => m.Id)
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { Class = "control-label" })
+        @Html.TextBoxFor(m => m.Name, new { Class = "form-control"})
+    </div>
+    <div class="form-group">
+         @Html.LabelFor(m => m.DoB,  new { Class = "control-label" })
+         @Html.TextBoxFor(m => m.DoB, new { Class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Major, new { Class = "control-label" })
+        @Html.TextBoxFor(m => m.Major, new { Class = "form-control" })
+    </div>
+        <input type="submit" value="Save" class="btn btn-primary" />
+    <input type="submit" value="Cancel" class="btn btn-warning" asp-area="" asp-controller="Teacher" asp-action="ManageTeacher" />
+}

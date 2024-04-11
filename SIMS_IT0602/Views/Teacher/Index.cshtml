@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Dashboard</title>
+    <!-- Link tới Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: darkorange;
+        }
+        h1 {
+            margin-top: 80px;
+        }
+        .logout-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        .list-group {
+            margin-top: 35px;
+        }
+
+        #logo {
+            position: fixed;
+            width: 150px;
+            height: 200px;
+            top: 100px;
+            left: 80px;
+            z-index: 9999; /* Đảm bảo logo hiển thị trên các phần khác của trang */
+        }
+    </style>
+</head>
+<body>
+    <img src="~/css/img/logo.webp" alt="Logo" id="logo">
+    <div class="logout-container">
+        <a class="btn btn-danger" asp-area="" asp-controller="Home" asp-action="Index">Logout</a>
+    </div>
+    <div class="container">
+        <h1>Welcome To HomePage,Teacher!</h1>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action list-group-item-warning"><a href="@Url.Action("ViewClass", "Class")">View Classes</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-warning"><a href="@Url.Action("ViewStudent", "Student")">View Students</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-warning"><a href="@Url.Action("ViewCourse", "Course")">View Courses</a></li>
+        </ul>
+    </div>
+    <!-- Link tới Bootstrap JS (nếu cần) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>

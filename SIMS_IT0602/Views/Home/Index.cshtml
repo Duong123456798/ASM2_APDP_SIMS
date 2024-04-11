@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Homepage</title>
+    <style>
+        /* CSS styles can be added here */
+        body {
+            background-color: darkorange;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+          
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .course-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        /* New styles for buttons */
+        .btn-container {
+            position: absolute;
+            top: 20px; /* Adjust this value as needed */
+            right: 20px; /* Adjust this value as needed */
+            margin-top: 10px; /* Điều chỉnh khoảng cách từ top */
+        }
+
+        .text-dark {
+            position: absolute;
+            top: 23px; /* Adjust this value as needed */
+            left: 20px; /* Đặt vị trí cố định ở bên trái */
+            color:black; /* Màu chữ */
+            font-size: 25px; /* Kích thước chữ */
+        }
+        .btn-outline-info {
+            margin-left: 15px;/* Adjust this value as needed */
+            margin-right: 15px;
+        }
+
+        #logo {
+            position: fixed;
+            width: 170px;
+            height: 200px;
+            top: 100px;
+            left: 100px;
+            z-index: 9999; /* Đảm bảo logo hiển thị trên các phần khác của trang */
+        }
+    </style>
+</head>
+<body>
+    <img src="~/css/img/logo.webp" alt="Logo" id="logo">
+    <header>
+        <a><img src="/css/img/btec.png" style="width: 200px; height: auto;" /></a>
+        <h1>BTEC FPT</h1>
+        <p>Welcome to our homepage</p>
+    </header>
+    <div class="container">
+        <a class="text-dark">STUDENT MANAGEMENT SYSTEM</a>
+        <div class="btn-container">
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Authentication" asp-action="Login">Log In</a>
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Authentication" asp-action="Register">Register</a>
+        </div>
+        <h2>About FPT BTEC</h2>
+        <p>BTEC FPT is a leading institution committed to providing the best quality education to students.</p>
+
+        <h2>List of Majors:</h2>
+        <ul class="course-list">
+            <li class="course-item">    
+                <h3>*Marketing</h3>
+            </li>
+            <li class="course-item">
+                <h3>*Business Administration</h3>
+            </li>
+            <li class="course-item">
+                <h3>*Information Technology</h3>
+            </li>
+            <li class="course-item">
+                <h3>*Graphic Design</h3>
+            </li>
+            <!-- Add more items as needed -->
+        </ul>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+[
+  {
+    "Id": 1,
+    "Name": "Le Tung Duong",
+    "DoB": "2004-10-17",
+    "Address": "Phu Tho",
+    "Major": "Technology Information"
+  },
+  {
+    "Id": 2,
+    "Name": "Hoang Trong Nghia",
+    "DoB": "2004-01-01",
+    "Address": "Ha Noi",
+    "Major": "Technology Information"
+  },
+  {
+    "Id": 3,
+    "Name": "Phung Minh Duc",
+    "DoB": "2004-02-02",
+    "Address": "Hai Phong",
+    "Major": "Technology Information"
+  },
+  {
+    "Id": 4,
+    "Name": "Tran Van Khanh",
+    "DoB": "2004-03-03",
+    "Address": "Bac Ninh",
+    "Major": "Graphics Design"
+  },
+  {
+    "Id": 5,
+    "Name": "New Name",
+    "DoB": "0001-01-01",
+    "Address": "New Address",
+    "Major": "New Major"
+  }
+]

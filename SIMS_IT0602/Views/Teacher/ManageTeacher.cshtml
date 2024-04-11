@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Teacher>
+<h1>Hello  , you are Admin!</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Date of Birth</td>
+            <td>Major</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.DoB</td>
+                        <td>@item.Major</td>
+                        <td>
+                    <a class="btn btn-outline-danger"
+                               href="@Url.Action("Delete","Teacher",new {id=item.Id})">Delete</a>
+                    <a class="btn btn-outline-warning"
+                       href="@Url.Action("EditTeacher","Teacher",new {id=item.Id})">Edit</a>
+                        </td>
+                    </tr>
+        }
+    </tbody>
+</table>
+
+
+<ul>
+    <li>
+        <a class="btn btn-outline-success" asp-controller="Teacher" asp-action="NewTeacher">New Teacher</a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="btn btn-sm btn-primary" asp-controller="Admin" asp-action="Index">Back to HomePage</a>
+    </li>
+</ul>

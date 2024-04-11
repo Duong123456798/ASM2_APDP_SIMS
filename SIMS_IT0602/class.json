@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Name": "IT0602",
+    "Major": "Technology Information",
+    "Lecturer": "Dinh Van Dong"
+  },
+  {
+    "Id": 2,
+    "Name": "IT0601",
+    "Major": "Technology Information",
+    "Lecturer": "Do Quoc Binh"
+  },
+  {
+    "Id": 3,
+    "Name": "IT0603",
+    "Major": "Technology Information",
+    "Lecturer": "Nguyen Van Toan"
+  },
+  {
+    "Id": 4,
+    "Name": "IT0604",
+    "Major": "Kinh Doanh",
+    "Lecturer": "Nguyen Thanh Trieu"
+  }
+]

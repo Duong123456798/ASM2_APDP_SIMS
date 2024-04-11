@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Student>
+<h1>Hello Teacher , Welcome to StudentList!</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Date of Birth</td>
+            <td>Address</td>
+            <td>Major</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.DoB</td>
+                <td>@item.Address</td>
+                <td>@item.Major</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
+<ul><li> <a class="btn btn-sm btn-primary" asp-controller="Teacher" asp-action="Index">Back to HomePage</a></li></ul>

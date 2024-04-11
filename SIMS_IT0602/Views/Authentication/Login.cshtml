@@ -1,0 +1,102 @@
+﻿
+@model User
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: darkorange;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #FFA500; /* Orange color */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3; /* Darker shade of blue */
+            }
+
+            a {
+                height:45px;
+                width:410px;
+                margin-top: 5px;
+            }
+            input[type="submit"].btn-back {
+                margin-top: 5px;
+            }
+        .error-message {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        @using (Html.BeginForm("Login", "Authentication", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName, new { Class = "control-label" })
+                @Html.TextBoxFor(m => m.UserName,
+                         new { placeholder = "User Name", Class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Pass, new { Class = "control-label" })
+                @Html.PasswordFor(m => m.Pass,
+                         new { placeholder = "Password", Class = "form-control" })
+            </div>
+            <div class="error-message">
+                @ViewBag.error
+            </div>
+            <br />
+                <input type="submit" value="Login" class="btn btn-info" />
+            <a class="btn btn-success" asp-area="" asp-controller="Authentication" asp-action="Register">Register</a>
+                <input type="submit" value="Back" class="btn-back" asp-area="" asp-controller="Home" asp-action="Index" />
+        }
+    </div>
+</body>
+</html>
+

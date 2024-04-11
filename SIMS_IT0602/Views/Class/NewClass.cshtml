@@ -1,0 +1,26 @@
+﻿    @model Class
+    <h1 style="color:orange">New Class</h1>
+
+    @using (Html.BeginForm("NewClass", "Class", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Id, new { Class = "control-label" })
+            @Html.TextBoxFor(m => m.Id, new { Class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name, new { Class = "control-label" })
+            @Html.TextBoxFor(m => m.Name, new { Class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Major, new { Class = "control-label" })
+            @Html.TextBoxFor(m => m.Major, new { Class = "form-control" })
+        </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Lecturer, new { Class = "control-label" })
+        @Html.DropDownListFor(m => m.Lecturer, (SelectList)ViewBag.Teachers, "Select Lecturer", new { @class = "form-control" })
+    </div>
+        <input type="submit" value="Create Class" class="btn btn-primary" />
+        <input type="submit" value="Cancel" class="btn btn-warning" asp-area="" asp-controller="Class" asp-action="ManageClass" />
+
+    }

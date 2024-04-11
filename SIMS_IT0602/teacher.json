@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Name": "Do Quoc Binh",
+    "DoB": "0001-01-01",
+    "Major": "Technology Information"
+  },
+  {
+    "Id": 2,
+    "Name": "Nguyen Thanh Trieu",
+    "DoB": "0001-01-01",
+    "Major": "Business"
+  },
+  {
+    "Id": 3,
+    "Name": "Nguyen Van Toan",
+    "DoB": "0001-01-01",
+    "Major": "Graphics Design"
+  },
+  {
+    "Id": 4,
+    "Name": "Dinh Van Dong",
+    "DoB": "0001-01-01",
+    "Major": "Business"
+  }
+]
